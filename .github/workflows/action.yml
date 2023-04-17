@@ -12,12 +12,8 @@ env:
   IMAGE: static-site
 
 jobs:
-    runs-on: ubuntu-latest
-
-
   setup-build-publish-deploy:
-    name: Setup, Build, Publish, and Deploy
-    environment: production
+    name: build and deploy
     runs-on: ubuntu-latest
 
     steps:

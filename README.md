@@ -30,4 +30,7 @@ The documentation is available in the `docs` folder.
 - We can store the config using `Vault` or `KMS` to make the application more secure.
 - We can make this into a microservice architecture and use `gRPC` to communicate between the services.
 - We can setup a gateway to handle the traffic and route the request to the correct service.
-- etc
+- We can run the repo through `SonarQube` to check the code quality and fix the issues.
+- We can use `Prometheus` to monitor the application and `Grafana` to visualize the metrics.
+- We can use `Helm` to manage the deployment of the application.
+- etc.

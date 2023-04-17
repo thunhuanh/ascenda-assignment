@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hotel-finder
+  labels:
+    app: hotel-finder
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hotel-finder
+  template:
+    metadata:
+      labels:
+        app: hotel-finder
+    spec:
+      containers:
+      - name: hotel-finder
+        image: gcr.io/<project-id>/<repository-name>:<tag>
+        ports:
+        - containerPort: 8080

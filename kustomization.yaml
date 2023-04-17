@@ -7,5 +7,5 @@ commonLabels:
   app: hotel-finder
 
 resources:
-- deployment.yaml
-- service.yaml
+- ./deployment/deployment.yaml
+- ./deployment/service.yaml

@@ -27,7 +27,7 @@ The documentation is available in the `docs` folder.
 
 ## Deployment
 - The application is deployed on `GCP` using `Kubernetes` and `Docker`.
-- The whole process is automated using `github actions`.
+- The whole process (Test pipeline, Build image and Deploy) is automated using `github actions`.
 - App URL: `http://34.87.111.208/api/v1/`
 
 ## Further Improvements

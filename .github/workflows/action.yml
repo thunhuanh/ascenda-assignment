@@ -9,7 +9,7 @@ env:
   GKE_CLUSTER: ascenda-cluster    
   GKE_ZONE: asia-southeast1  
   DEPLOYMENT_NAME: hotel-finder
-  IMAGE: static-site
+  IMAGE: ascenda
 
 jobs:
   setup-build-publish-deploy:

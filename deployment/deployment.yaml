@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: hotel-finder
-        image: gcr.io/<project-id>/<repository-name>:<tag>
+        image: gcr.io/sigma-sector-384007/ascenda:latest
         ports:
         - containerPort: 8080

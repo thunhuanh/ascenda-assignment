@@ -19,8 +19,15 @@ The documentation is available in the `docs` folder.
 
 ## Deployment Strategy
 - Option 1:
-  - We can deploy the whole application in a single container using `docker` to containerize the application and `Kubernetes` to manage the containers. In order to automate the deployment, we can use `Jenkins` or `github actions` or `gitlab-ci` to build the application and deploy it to `GKE`. We can also run the test pipeline automatically before deploying the application to production.
+  - We can deploy the whole application in a single container using `docker` to containerize the application and `Kubernetes` to manage the containers. In order to automate the deployment, we can use `Jenkins`, `github actions`,`circle-ci` or `gitlab-ci` to build the application and deploy it to Cloud provider like `GCP`. We can also run the test pipeline automatically before deploying the application to production.
 - Option 2:
   - Since the `worker` and `api server` is not depend on each other, we can deploy them seperately, `worker` as a cronjob that run every 5 minutes and `api server` as a deployment.
 
 - Cloud Provider: `GCP` or `AWS` or we can consider other option like `Heroku`
+
+## Further Improvements
+- We can use `Redis` to cache the data and improve the performance of the API.
+- We can store the config using `Vault` or `KMS` to make the application more secure.
+- We can make this into a microservice architecture and use `gRPC` to communicate between the services.
+- We can setup a gateway to handle the traffic and route the request to the correct service.
+- etc

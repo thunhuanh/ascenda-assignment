@@ -8,8 +8,8 @@ This is a simple web server written in `Golang` that retrieves, clean and store 
 - Clone the repository
 - Run `go run main.go` to start the server
 - Use `curl` or `Postman` to test the API:
-    - `curl -X GET http://localhost:8080/hotels?destination=5432`
-    - `curl -X GET http://localhost:8080/hotels?destination=5432&hotels=iJhz`
+    - `curl -X GET http://34.87.111.208/api/v1/hotels?destination=5432`
+    - `curl -X GET http://34.87.111.208/api/v1/hotels?destination=5432&hotels=iJhz`
 
 ## Testing
 - Run `go test ./... -v` to run all tests
@@ -24,6 +24,11 @@ The documentation is available in the `docs` folder.
   - Since the `worker` and `api server` is not depend on each other, we can deploy them seperately, `worker` as a cronjob that run every 5 minutes and `api server` as a deployment.
 
 - Cloud Provider: `GCP` or `AWS` or we can consider other option like `Heroku`
+
+## Deployment
+- The application is deployed on `GCP` using `Kubernetes` and `Docker`.
+- The whole process is automated using `github actions`.
+- App URL: `http://34.87.111.208/api/v1/`
 
 ## Further Improvements
 - We can use `Redis` to cache the data and improve the performance of the API.

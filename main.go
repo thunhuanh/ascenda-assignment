@@ -293,7 +293,9 @@ func main() {
 
 	// start the worker that clean and store the data and the cron job that fire the update data signal
 	go workers.ParserAndCleaner()
-	s.Every(5).Minutes().Do(workers.UpdateData)
+	// the worker should run every 5 minutes
+	// but because the data from sources are static, we will just run it once per day
+	s.Every(1).Day().At("00:00").Do(workers.UpdateData)
 	s.StartAsync()
 
 	// create a new server
